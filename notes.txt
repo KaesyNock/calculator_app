@@ -1,0 +1,28 @@
+wrapper
+container 
+calculator
+results
+
+wrapper 
+-calculator background
+-possibly moving?
+
+container 
+-two tables 
+-flex columns on med 
+-on mobile results pop up on click 
+
+calculator 
+-title container 
+-calculator container itself 
+-flex 
+-display container (table header flex-2)
+-table 
+-4 columns
+-4 rows
+-numbers are blue 
+-operations are red 
+
+history
+-view command 
+-title container 
