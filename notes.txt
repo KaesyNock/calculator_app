@@ -17,6 +17,7 @@ calculator
 -calculator container itself 
 -flex 
 -display container (table header flex-2)
+-includes arrow button
 -table 
 -4 columns
 -4 rows

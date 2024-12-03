@@ -1,39 +1,113 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Calculator = () => {
+	const [isHovered, setIsHovered] = useState(false);
+
 	return (
-		<div className="container">
-			<div className="border-2 p-4 mx-60">
-				<h1 className="text-2xl">Welcome, Username</h1>
-				{/* pull in state for username later */}
-			</div>
-			<div className="container">
-				<div className="grid-cols-4 gap-4">
-					<div className="col-span-4">Results</div>
-					<ul className="grid gap-2 grid-cols-4 grid-rows-4 content-center">
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-							<li>+</li>
-						
-						
-							<li>4</li>
-							<li>5</li>
-							<li>6</li>
-							<li>-</li>
-						
-						
-							<li>7</li>
-							<li>8</li>
-							<li>9</li>
-							<li>/</li>
-					
-					
-							<li>,</li>
-							<li>0</li>
-							<li>=</li>
-							<li>*</li>
-						
+		<div className="pr-40 m-auto">
+			<div className="p-4 border rounded border-black mx-60 mt-20 size-full margin-auto mix-blend-luminosity">
+				<div className="gap-2 content-center">
+					<h1 className="text-2xl text-integers border rounded border-black px-2 py-2">
+						Welcome, Username
+					</h1>
+					{/* pull in state for username later */}
+				</div>
+
+				<div className="grid grid-row">
+					<div className="text-2xl text-right border rounded border-black p-4 mt-4">
+						<text>
+							<button
+								onMouseEnter={() => setIsHovered(true)}
+								onMouseLeave={() => setIsHovered(false)}
+								style={{
+									transition: "transform 0.2 ease",
+									transform: isHovered ? "translateX(0px)" : "translateX(10)",
+								}}>
+								←
+							</button>
+						</text>
+					</div>
+					<ul className="grid grid-row gap-2 grid-cols-4 grid-rows-4 content-center p-4">
+						<button className="numbersButton">
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								1
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								2
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								3
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								+
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								4
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								5
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								6
+							</li>
+						</button>
+						<button>
+							<li className="bg-operators rounded text-white text-xl px-2 py-1">
+								-
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								7
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								8
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								9
+							</li>
+						</button>
+						<button>
+							<li className="bg-operators rounded text-white text-xl px-2 py-1">
+								/
+							</li>
+						</button>
+						<button>
+							<li className="bg-operators rounded text-white text-xl px-2 py-1">
+								,
+							</li>
+						</button>
+						<button>
+							<li className="bg-integers rounded text-white text-xl px-2 py-1">
+								0
+							</li>
+						</button>
+						<button>
+							<li className="bg-operators rounded text-white text-xl px-2 py-1">
+								=
+							</li>
+						</button>
+						<button>
+							<li className="bg-operators rounded text-white text-xl px-2 py-1">
+								*
+							</li>
+						</button>
 					</ul>
 				</div>
 			</div>
