@@ -131,3 +131,6 @@ dist
 
 # python virtual envirement
 .venv
+
+# cashe
+__pycache__
