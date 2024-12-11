@@ -27,30 +27,33 @@ class User:
     @staticmethod
     def save(data):
         query = """INSERT INTO users (username) 
-                    VALUES (%(username)s)"""
+                   VALUES (%(username)s);"""
         return MySQLConnection("calculator_db").query_db(query, data)
 
 class Calculation:
     def __init__(self, data):
         self.id = data['id']
-        self.operation = data['operation']
+        self.expression = data['expression']
         self.result = data['result']
         self.user_id = data['user_id']
 
-    # this will save a calculation to the database
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "expression": self.expression,
+            "result": self.result,
+            "user_id": self.user_id
+        }
+
     @staticmethod
     def save(data):
-        query = """INSERT INTO operations (operation, result, user_id)
-                    VALUES (%(operation)s, %(result)s, %(user_id)s)"""
+        query = """INSERT INTO expressions (expression, result, user_id)
+                    VALUES (%(expression)s, %(result)s, %(user_id)s)"""
         return MySQLConnection("calculator_db").query_db(query, data)
 
-    # and this will get all calculations for a user
     @classmethod
     def get_by_user_id(cls, data):
-        query = "SELECT * FROM operations WHERE user_id = %(user_id)s ORDER BY created_at;"
+        query = "SELECT * FROM expressions WHERE user_id = %(user_id)s ORDER BY created_at;"
         results = MySQLConnection("calculator_db").query_db(query, data)
-        calculations = []
-        for calc in results:
-            calculations.append(cls(calc))
-        return calculations
-
+        expressions = [cls(result) for result in results]
+        return expressions
