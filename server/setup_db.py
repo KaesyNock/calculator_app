@@ -26,11 +26,11 @@ def initialize_database():
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS users (
                 id INT AUTO_INCREMENT PRIMARY KEY,
-                username VARCHAR(50) UNIQUE NOT NULL
+                username VARCHAR(50) NOT NULL
             );
-        """)
+        """)      
         cursor.execute("""
-            CREATE TABLE IF NOT EXISTS operations (
+            CREATE TABLE IF NOT EXISTS expressions (
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 user_id INT NOT NULL,
                 expression TEXT NOT NULL,
