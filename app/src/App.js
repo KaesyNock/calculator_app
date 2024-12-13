@@ -1,13 +1,14 @@
 import './App.css';
-import Calculator from './components/Calculator';
+import Calculator from './components/calculator/Calculator';
 import History from './components/History';
-import background from './assets/background.mp4';
+
 
 
 function App() {
+
   return (
 		<div className="App">
-			<div className="flex">
+			<div className="flex h-screen">
 				<div className="flex-2 bg-transparent">
 					<Calculator />
 				</div>

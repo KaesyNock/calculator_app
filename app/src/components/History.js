@@ -5,7 +5,7 @@ const History = () => {
 		<div className="hidden md:block">
 			<div className="p-4 border rounded border-black mx-60 mt-20 mix-blend-luminosity ">
 				<div className="gap-2 content-center">
-					<h1 className="text-2xl text-integers border rounded border-black px-2 py-2">
+					<h1 className="text-2xl text-integers border rounded border-black px-2 py-2 text-center">
 						History
 					</h1>
 					{/* pull in state after for back end */}

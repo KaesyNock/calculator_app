@@ -27,3 +27,42 @@ calculator
 history
 -view command 
 -title container 
+
+login form
+-username
+-password
+-verification- json web tokens
+
+create new user- post request
+verify- get request
+
+end points:
+(post)  /api/user/login
+(post) /api/user/register 
+(get)   /api/user
+
+integers/operators
+-string type 
+
+api endpoints for math 
+(post)  /api/math
+(get)   /api/math
+
+middleware authentication 
+
+mobile optimization
+
+full crud application 
+
+user {
+id: int,
+username: string
+created_at: datey
+
+}
+
+equation {
+   id: int,
+   equation: string,
+   created_at: date
+}
