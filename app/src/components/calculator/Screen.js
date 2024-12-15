@@ -12,7 +12,7 @@ const Screen = ({ value }) => {
 	return (
 		// eslint-disable-next-line react/jsx-no-undef
 		<Form>
-			<Input
+			<textarea
 				type='string'
 				className='h-[100px] w-[100%] mb-[10px] border rounded border-black flex justify-end box-border px-2 py-2'
 				mode='single'
