@@ -8,7 +8,6 @@ const History = () => {
 					<h1 className="text-2xl text-integers border rounded border-black px-2 py-2 text-center">
 						History
 					</h1>
-					{/* pull in state after for back end */}
 				</div>
 				<div className="border rounded border-black p-4 mt-4 pb-60"></div>
 			</div>
